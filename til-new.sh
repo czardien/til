@@ -13,17 +13,19 @@ function __get_id {
 
 function _new() {
 	__init
+
+	[[ -z $EDITOR ]] && echo "warning: set your $EDITOR environment variable"
 	sl=$(__slugify "$@")
 	id=$(__get_id)
 	basename="$id-$sl.md"
 	filepath=$HOME/.til/$basename
 
 	[[ -f $filepath ]] && (echo "fatal: $filepath already exists, very unlucky :broken-heart:"; return 1)
-	echo $filepath
+	echo "# $@" > $filepath
+	echo "" >> $filepath
+	echo "This is happening!" >> $filepath
+
+	[[ -z $EDITOR ]] || $EDITOR $filepath
 }
 
-verb=$1
-allowed="new"
-
-shift 1
-[[ $allowed =~ (^| )$verb($| ) ]] && _$verb "$@" || echo -e 'fatal: action not allowed'
+_new "$@"

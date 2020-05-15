@@ -9,8 +9,6 @@ A bash util to quickly write and persist TILs locally.
 
 ## Installation
 
-Run:
-
 ```
 git clone git@github.com:czardien/til.git && cd til && make
 ```
@@ -21,8 +19,6 @@ git clone git@github.com:czardien/til.git && cd til && make
 
 ### New
 
-Run:
-
 ```
 til-new I just learned something about Rust!
 ```
@@ -31,8 +27,6 @@ Proceed with writing up about that very nice thing you just learnt about Rust.
 
 ### List
 
-Run:
-
 ```
 til-ls
 ```
@@ -40,8 +34,6 @@ til-ls
 See all your nice TILs about Rust (or other topics).
 
 ### Remove
-
-Run:
 
 ```
 til-rm [name] [--fzf]

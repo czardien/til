@@ -2,10 +2,10 @@
 
 A bash util to quickly write and persist TILs locally.
 
-## In the future...
+## In the future
 
-... it will automatically sync into a Git repository :heart:
-... it will be extremely efficiently searchable :heart:
+* it will automatically sync into a Git repository :heart:
+* it will be nicely searchable :heart:
 
 ## Installation
 

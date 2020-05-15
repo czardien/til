@@ -4,7 +4,8 @@ A bash util to quickly write and persist TILs locally.
 
 ## In the future...
 
-... it will also automatically sync into a Git repository :heart:
+... it will automatically sync into a Git repository :heart:
+... it will be extremely efficiently searchable :heart:
 
 ## Installation
 

@@ -1,4 +1,8 @@
 #!/usr/bin/env sh
+function __usage {
+	echo "usage: til-new <TITLE>"
+}
+
 function __slugify {
 	echo "$@" | iconv -t ascii//TRANSLIT | sed -r s/[^a-zA-Z0-9]+/-/g | sed -r s/^-+\|-+$//g | tr A-Z a-z
 }
@@ -28,4 +32,5 @@ function _new() {
 	[[ -z $EDITOR ]] || $EDITOR $filepath
 }
 
+[[ -z "$1" ]] && echo "fatal: title parameter empty" && __usage && exit 1
 _new "$@"

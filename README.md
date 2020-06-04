@@ -13,8 +13,6 @@ A bash util to quickly write and persist TILs locally.
 git clone git@github.com:czardien/til.git && cd til && make
 ```
 
-###### Todo: do `til-version`
-
 ## Usage
 
 ### New
@@ -24,6 +22,14 @@ til-new I just learned something about Rust!
 ```
 
 Proceed with writing up about that very nice thing you just learnt about Rust.
+
+### View
+
+Needs `fzf` and `bat`.
+
+```
+til
+```
 
 ### List
 

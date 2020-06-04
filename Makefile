@@ -1,4 +1,4 @@
-build:
+install:
 	chmod +x ./til-new.sh
 	chmod +x ./til-ls.sh
 	chmod +x ./til-rm.sh
@@ -6,4 +6,4 @@ build:
 	ln -sf $(shell pwd)/til-ls.sh $(HOME)/.local/bin/til-ls.sh
 	ln -sf $(shell pwd)/til-rm.sh $(HOME)/.local/bin/til-rm.sh
 
-all: build
+all: install

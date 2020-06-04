@@ -28,6 +28,9 @@ function _new() {
 	echo "# $@" > $filepath
 	echo "" >> $filepath
 	echo "This is happening!" >> $filepath
+	echo "" >> $filepath
+	echo "<!-- Add tags below -->" >> $filepath
+	echo "<!-- tag1,tag2 -->" >> $filepath
 
 	[[ -z $EDITOR ]] || $EDITOR $filepath
 }

@@ -33,6 +33,7 @@ function _new() {
 	echo "<!-- tag1,tag2 -->" >> $filepath
 
 	[[ -z $EDITOR ]] || $EDITOR $filepath
+	cd $HOME/.til/ && git add $basename && git commit -m "auto: added $sl"
 }
 
 [[ -z "$1" ]] && echo "fatal: title parameter empty" && __usage && exit 1

@@ -8,9 +8,11 @@ function _til {
 		cd $HOME/.til && fzf --height=100% --preview 'bat --color=always {}' --preview-window=down:90%
 	else
 		til=$(cd $HOME/.til && fzf --height=100% --preview 'bat --color=always {}' --preview-window=down:90%)
-		$EDITOR $HOME/.til/$til
-		cd $HOME/.til && test -z "$(git status --porcelain)" || \
-			(git add $til && git commit -m "auto: updated $til")
+		if [[ ! -z $til ]]; then
+			$EDITOR $HOME/.til/$til
+			cd $HOME/.til && test -z "$(git status --porcelain)" || \
+				(git add $til && git commit -m "auto: updated $til")
+		fi
 	fi
 }
 

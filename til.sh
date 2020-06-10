@@ -5,9 +5,9 @@ function _til {
 	[[ -z $tils ]] && echo "info: no tils found"
 
 	if [[ -z $EDITOR ]]; then
-		cd $HOME/.til && fzf --height=100% --preview 'bat --color=always {}' --preview-window=down:90%
+		cd $HOME/.til && fzf --height=100% --preview 'bat --color=always {}' --preview-window=down:80%
 	else
-		til=$(cd $HOME/.til && fzf --height=100% --preview 'bat --color=always {}' --preview-window=down:90%)
+		til=$(cd $HOME/.til && fzf --height=100% --preview 'bat --color=always {}' --preview-window=down:80%)
 		if [[ ! -z $til ]]; then
 			$EDITOR $HOME/.til/$til
 			cd $HOME/.til && test -z "$(git status --porcelain)" || \
